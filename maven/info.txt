@@ -5,9 +5,9 @@ ChatGPT said:
 Sure! Below is a simple Bash script that encrypts a password using OpenSSL with AES-256 encryption. It prompts the user for a password, encrypts it, and saves the encrypted password to a file.
 
 🔐 Bash Script: encrypt_password.sh
+----------------------------------------------------------------
 bash
-Copy
-Edit
+
 #!/bin/bash
 
 # Prompt user for password to encrypt
@@ -22,12 +22,15 @@ echo
 echo -n "$password" | openssl enc -aes-256-cbc -a -salt -pass pass:"$key" > encrypted_password.txt
 
 echo "Password encrypted and saved to encrypted_password.txt"
+-------------------------------------
+
 🔓 To Decrypt Later
+-----------------
 You can decrypt the password using:
 
 bash
-Copy
-Edit
+
+
 openssl enc -aes-256-cbc -d -a -in encrypted_password.txt -pass pass:<your_key>
 ✅ Requirements
 Ensure openssl is installed:
@@ -38,6 +41,8 @@ Edit
 sudo apt install openssl     # for Debian/Ubuntu
 # or
 sudo yum install openssl     # for RHEL/CentOS
+
+-------------------------
 Would you like to:
 
 Encrypt multiple passwords?
